@@ -137,7 +137,8 @@ GoogleMaps.prototype.initBtns = function () {
                 }
 
                 self.resetDrawingManagerInput(id);
-                self.resetCoordinatesSession(id, type);
+               if(self.options.session)
+                   self.resetCoordinatesSession(id, type);
                 object[index].setMap(null);
                 delete object[index];
             }
@@ -1022,7 +1023,8 @@ GoogleMaps.prototype.reset = function (objects) {
     let self = this;
 
     // TODO Refactor
-    self.resetCoordinatesSession();
+    if(self.options.session)
+        self.resetCoordinatesSession();
     objects = objects || null;
     if (objects) {
         $.each(objects, function (index, value) {
