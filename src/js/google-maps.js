@@ -30,7 +30,7 @@ GoogleMaps.prototype.initOptions = function (options) {
     this.options.locationable = typeof options.locationable !== 'undefined' ? options.locationable : false;
     this.options.streetviewable = typeof options.streetviewable !== 'undefined' ? options.streetviewable : false;
     this.options.fitzoomable = typeof options.fitzoomable !== 'undefined' ? options.fitzoomable : false;
-    this.options.session = typeof options.zoom !== 'undefined' ? options.session : false;
+    this.options.session = typeof options.session !== 'undefined' ? options.session : false;
     return this.options;
 };
 
